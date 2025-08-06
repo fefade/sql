@@ -48,9 +48,13 @@
 				/>
 			</form>
 
-			<Navbar.Item href="https://dxdns.dev/files" target="_blank"
-				>Arquivos</Navbar.Item
+			<Navbar.Item
+				variant="contained"
+				href="https://dxdns.dev/files"
+				target="_blank"
 			>
+				Arquivos
+			</Navbar.Item>
 		</div>
 	</Navbar>
 	{@render children?.()}
@@ -58,7 +62,7 @@
 
 <style>
 	.container {
-		width: 500px;
+		width: 800px;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
