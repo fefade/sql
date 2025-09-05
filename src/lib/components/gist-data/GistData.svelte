@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Card, Code, Link, Window } from "@dxdns/feflow-svelte"
+	import { Button, Card, Code, Link, Window } from "@dxdns-kit/svelte"
 
 	interface Props {
 		baseUrl: string

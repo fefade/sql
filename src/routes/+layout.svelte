@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { FeflowProvider, Link } from "@dxdns/feflow-svelte"
+	import favicon from "@/assets/512x512.png"
+	import { Provider, Link } from "@dxdns-kit/svelte"
 
 	let { children } = $props()
 </script>
 
-<FeflowProvider>
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+
+<Provider>
 	<div class="container">
 		{@render children?.()}
 	</div>
@@ -26,12 +31,12 @@
 			</small>
 		</Link>
 	</div>
-</FeflowProvider>
+</Provider>
 
 <style>
 	@font-face {
 		font-family: "Inter";
-		src: url("/fonts/Inter-Regular.woff2") format("woff2");
+		src: url("/fonts/Inter-Regular.woff") format("woff");
 		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
@@ -39,18 +44,18 @@
 
 	@font-face {
 		font-family: "Inter";
-		src: url("/fonts/Inter-Bold.woff2") format("woff2");
+		src: url("/fonts/Inter-Bold.woff") format("woff");
 		font-weight: 700;
 		font-style: normal;
 		font-display: swap;
 	}
 
 	:global(body) {
-		margin: 0;
-		padding: 0;
-		overflow-x: hidden;
 		font-family: "Inter", sans-serif;
 		line-height: 1.2;
+		overflow-x: hidden;
+		margin: 0;
+		padding: 0;
 	}
 
 	.container {

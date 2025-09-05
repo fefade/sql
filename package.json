@@ -32,8 +32,8 @@
 		"vite": "^6.0.4"
 	},
 	"dependencies": {
-		"@dxdns/feflow-core": "^0.0.21",
-		"@dxdns/feflow-svelte": "^0.0.20",
+		"@dxdns-kit/core": "^0.0.2",
+		"@dxdns-kit/svelte": "^0.0.2",
 		"zod": "^4.0.14"
 	}
 }
