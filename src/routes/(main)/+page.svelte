@@ -6,7 +6,7 @@
 		Button,
 		ShortcutListener,
 		VisibilityListener
-	} from "@dxdns-kit/svelte"
+	} from "@fefade/svelte"
 
 	let { data } = $props()
 

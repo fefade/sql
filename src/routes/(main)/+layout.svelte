@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
-	import { Link, Navbar, SearchInput } from "@dxdns-kit/svelte"
+	import { Link, Navbar, SearchInput } from "@fefade/svelte"
 
 	let { children } = $props()
 

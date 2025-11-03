@@ -1,12 +1,13 @@
 <script lang="ts">
 	import favicon from "@/assets/512x512.png"
-	import { Provider, Link } from "@dxdns-kit/svelte"
+	import { Provider, Link } from "@fefade/svelte"
 
 	let { children } = $props()
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<link rel="canonical" href="https://sql.dxdns.dev" />
 </svelte:head>
 
 <Provider>

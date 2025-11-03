@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state"
 	import { GistData } from "@/components/gist-data"
-	import { Link } from "@dxdns-kit/svelte"
+	import { Link } from "@fefade/svelte"
 
 	let { data } = $props()
 

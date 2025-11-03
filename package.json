@@ -32,8 +32,8 @@
 		"vite": "^6.0.4"
 	},
 	"dependencies": {
-		"@dxdns-kit/core": "^0.0.2",
-		"@dxdns-kit/svelte": "^0.0.2",
+		"@fefade/core": "^0.0.4",
+		"@fefade/svelte": "^0.0.5",
 		"zod": "^4.0.14"
 	}
 }

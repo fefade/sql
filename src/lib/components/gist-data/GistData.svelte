@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Card, Code, Link, Window } from "@dxdns-kit/svelte"
+	import { Button, Card, Code, Link, Window } from "@fefade/svelte"
 
 	interface Props {
 		baseUrl: string
