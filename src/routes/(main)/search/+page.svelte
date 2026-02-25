@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GistData } from "@/components/gist-data"
+	import { GistData } from "$lib/components/gist-data"
 
 	let { data } = $props()
 </script>

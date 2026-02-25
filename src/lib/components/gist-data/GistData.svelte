@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Button, Card, Code, Link, Window } from "@fefade/svelte"
+	import { page } from "$app/state"
+	import { Button, Card, Code, Link, Window } from "@fefade-ui/svelte"
 
 	interface Props {
 		baseUrl: string
@@ -35,8 +36,8 @@
 
 	const title = filename.split("-").join(" ").replace(".md", "")
 	const pathname = title.split(" ").join("-").toLowerCase()
-	const url = `${baseUrl}${raw_id}?title=${pathname}`
-	const urlShare = `https://wa.me/?text=https://sql.dxdns.dev${url}`
+	const url = `${baseUrl.replace(/^\//, "")}${raw_id}?title=${pathname}`
+	const urlShare = `https://wa.me/?text=${page.url}${url}`
 </script>
 
 <Window>

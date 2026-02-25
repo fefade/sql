@@ -1,4 +1,4 @@
-import githubService from "@/services/githubService"
+import githubService from "$lib/services/githubService"
 import { type RequestEvent, json } from "@sveltejs/kit"
 import { z } from "zod"
 

@@ -1,36 +1,18 @@
 <script lang="ts">
-	import favicon from "@/assets/512x512.png"
-	import { Provider, Link } from "@fefade/svelte"
+	import favicon from "$lib/assets/images/favicon.ico"
+	import { Provider } from "@fefade-ui/svelte"
 
 	let { children } = $props()
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<link rel="canonical" href="https://sql.dxdns.dev" />
+	<link rel="canonical" href="https://sql.fefade.com" />
 </svelte:head>
 
 <Provider>
 	<div class="container">
 		{@render children?.()}
-	</div>
-
-	<div class="footer muted">
-		<div>
-			<span>&copy; 2025</span>
-			<Link href="https://dxdns.dev" target="_blank" hover="right">dxdns</Link>
-		</div>
-
-		<Link
-			hover="underlineNone"
-			href="https://github.com/sponsors/dxdns"
-			target="_blank"
-		>
-			<small>
-				<span style="filter: invert(0.5);">❤️</span>
-				Sponsor this project
-			</small>
-		</Link>
 	</div>
 </Provider>
 
@@ -67,13 +49,5 @@
 		justify-content: center;
 		align-items: center;
 		min-height: calc(100vh - 15rem);
-	}
-
-	.footer {
-		padding: 5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
 	}
 </style>

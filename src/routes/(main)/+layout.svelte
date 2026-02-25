@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
-	import { Link, Navbar, SearchInput } from "@fefade/svelte"
+	import { Link, Navbar, SearchInput } from "@fefade-ui/svelte"
 
 	let { children } = $props()
 
@@ -48,11 +48,7 @@
 				/>
 			</form>
 
-			<Navbar.Item
-				variant="contained"
-				href="https://dxdns.dev/files"
-				target="_blank"
-			>
+			<Navbar.Item variant="contained" href="/files" target="_blank">
 				Arquivos
 			</Navbar.Item>
 		</div>

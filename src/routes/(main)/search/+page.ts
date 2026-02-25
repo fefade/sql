@@ -1,6 +1,6 @@
-import type { GistDataFileType } from "@/types"
+import type { GistDataFileType } from "$lib/types"
 import type { PageLoad } from "./$types"
-import apiService from "@/services/apiService"
+import apiService from "$lib/services/apiService"
 
 export const load = (async ({ url, fetch }) => {
 	const query = url.searchParams.get("query")

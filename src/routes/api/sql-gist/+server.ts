@@ -1,5 +1,5 @@
-import githubService from "@/services/githubService"
-import type { GistDataFileType } from "@/types"
+import githubService from "$lib/services/githubService"
+import type { GistDataFileType } from "$lib/types"
 import { json, type RequestEvent } from "@sveltejs/kit"
 import { z } from "zod"
 

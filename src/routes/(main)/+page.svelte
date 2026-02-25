@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { GistData } from "@/components/gist-data/index.js"
-	import apiService from "@/services/apiService.js"
-	import type { GistDataFileType } from "@/types/gist.types.js"
+	import { GistData } from "$lib/components/gist-data/index.js"
+	import apiService from "$lib/services/apiService.js"
+	import type { GistDataFileType } from "$lib/types/gist.types.js"
 	import {
 		Button,
 		ShortcutListener,
 		VisibilityListener
-	} from "@fefade/svelte"
+	} from "@fefade-ui/svelte"
 
 	let { data } = $props()
 
