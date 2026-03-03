@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { page } from "$app/state"
-	import { Button, Card, Code, Link, Window } from "@fefade-ui/svelte"
+	import {
+		Badge,
+		Button,
+		Card,
+		Code,
+		Link,
+		useMediaQuery
+	} from "@fefade-ui/svelte"
 
 	interface Props {
 		baseUrl: string
@@ -13,6 +20,8 @@
 
 	let elCode: HTMLElement | undefined = $state()
 	let copied = $state(false)
+
+	const isSm = useMediaQuery("max-width", "sm")
 
 	function selectText(el: HTMLElement) {
 		const range = document.createRange()
@@ -40,8 +49,23 @@
 	const urlShare = `https://wa.me/?text=${page.url}${url}`
 </script>
 
-<Window>
-	{#snippet label()}
+<Card style="display: flex; flex-direction: column; gap: 1rem;">
+	<div
+		style="
+		display: flex; 
+		gap: 1rem; 
+		flex-wrap: wrap; 
+		padding: 1rem 0; 
+		justify-content: {isSm.value ? 'center' : 'flex-start'};"
+	>
+		{#if !isSm.value}
+			<div>
+				<Badge class="bg-error" roundedFull size="xs"></Badge>
+				<Badge class="bg-warning" roundedFull size="xs"></Badge>
+				<Badge class="bg-success" roundedFull size="xs"></Badge>
+			</div>
+		{/if}
+
 		<Link
 			href={url}
 			style="
@@ -52,7 +76,7 @@
 		>
 			{title.toUpperCase()}
 		</Link>
-	{/snippet}
+	</div>
 	<Card variant="contained">
 		<Code style="max-height: 200px;">
 			{@const contentFiltered = content
@@ -112,4 +136,4 @@
 			</svg>
 		</Link>
 	</div>
-</Window>
+</Card>

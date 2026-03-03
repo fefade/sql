@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/state"
 	import favicon from "$lib/assets/images/favicon.ico"
 	import { Provider } from "@fefade-ui/svelte"
 
@@ -7,7 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<link rel="canonical" href="https://sql.fefade.com" />
+	<link rel="canonical" href={page.url.href} />
 </svelte:head>
 
 <Provider>
