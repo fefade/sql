@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
+	import { resolve } from "$app/paths"
 	import { Link, Navbar, SearchInput } from "@fefade-ui/svelte"
 
 	let { children } = $props()
@@ -10,7 +11,7 @@
 		const form = new FormData(event.target as HTMLFormElement)
 		const query = form.get("query")
 
-		goto(`/search?query=${query?.toString()}`)
+		goto(resolve(`/search?query=${query?.toString()}`))
 	}
 </script>
 
@@ -42,7 +43,7 @@
 					oninput={(e) => {
 						const target = e.target as HTMLInputElement
 						if (target.value === "") {
-							goto("/")
+							goto(resolve("/"))
 						}
 					}}
 				/>
