@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state"
+	import { Constants } from "@fefade-ui/core"
 	import {
 		Badge,
 		Button,
@@ -43,10 +44,12 @@
 		setTimeout(() => (copied = false), 2000)
 	}
 
-	const title = filename.split("-").join(" ").replace(".md", "")
-	const pathname = title.split(" ").join("-").toLowerCase()
-	const url = `${baseUrl.replace(/^\//, "")}${raw_id}?title=${pathname}`
-	const urlShare = `https://wa.me/?text=${page.url}${url}`
+	const title = $derived(filename.split("-").join(" ").replace(".md", ""))
+	const pathname = $derived(title.split(" ").join("-").toLowerCase())
+	const url = $derived(
+		`${baseUrl.replace(/^\//, "")}${raw_id}?title=${pathname}`
+	)
+	const urlShare = $derived(`https://wa.me/?text=${page.url}${url}`)
 </script>
 
 <Card style="display: flex; flex-direction: column; gap: 1rem;">
@@ -110,7 +113,7 @@
 				height="16px"
 				viewBox="0 -960 960 960"
 				width="16px"
-				fill="#e3e3e3"
+				fill={copied ? Constants.themeColorVar.disabled : "#e3e3e3"}
 			>
 				<path
 					d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"
