@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { page } from "$app/state"
-	import favicon from "$lib/assets/images/favicon.ico"
+	import icon32 from "@fefade/common/images/icon-32.png"
+	import icon180 from "@fefade/common/images/icon-180.png"
 	import { Provider } from "@fefade-ui/svelte"
 
 	let { children } = $props()
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={icon32} />
+	<link rel="apple-touch-icon" sizes="180x180" href={icon180} />
 	<link rel="canonical" href={page.url.href} />
 </svelte:head>
 
